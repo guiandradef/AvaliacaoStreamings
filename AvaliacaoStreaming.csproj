@@ -111,11 +111,11 @@
     <Compile Include="FrmPesquisarConteudo.Designer.cs">
       <DependentUpon>FrmPesquisarConteudo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPricipal.cs">
+    <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPricipal.Designer.cs">
-      <DependentUpon>FrmPricipal.cs</DependentUpon>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -131,8 +131,8 @@
     <EmbeddedResource Include="FrmPesquisarConteudo.resx">
       <DependentUpon>FrmPesquisarConteudo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPricipal.resx">
-      <DependentUpon>FrmPricipal.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
