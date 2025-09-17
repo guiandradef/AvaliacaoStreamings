@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPesquisarConteudoPrincipal = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnPesquisarConteudoPrincipal);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label2);
@@ -74,18 +74,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1184, 661);
             this.panel2.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(12, 106);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 36);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -107,18 +95,19 @@
             this.panel3.Size = new System.Drawing.Size(1196, 92);
             this.panel3.TabIndex = 5;
             // 
-            // button3
+            // btnPesquisarConteudoPrincipal
             // 
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(702, 360);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 33);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Pesquisar conteúdo";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPesquisarConteudoPrincipal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.btnPesquisarConteudoPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisarConteudoPrincipal.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarConteudoPrincipal.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarConteudoPrincipal.Location = new System.Drawing.Point(702, 360);
+            this.btnPesquisarConteudoPrincipal.Name = "btnPesquisarConteudoPrincipal";
+            this.btnPesquisarConteudoPrincipal.Size = new System.Drawing.Size(170, 33);
+            this.btnPesquisarConteudoPrincipal.TabIndex = 4;
+            this.btnPesquisarConteudoPrincipal.Text = "Pesquisar conteúdo";
+            this.btnPesquisarConteudoPrincipal.UseVisualStyleBackColor = true;
+            this.btnPesquisarConteudoPrincipal.Click += new System.EventHandler(this.btnPesquisarConteudoPrincipal_Click);
             // 
             // button2
             // 
@@ -169,6 +158,19 @@
             this.label1.Text = "CineReviews";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(104)))), ((int)(((byte)(207)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(12, 106);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(42, 36);
+            this.button4.TabIndex = 7;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +194,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPesquisarConteudoPrincipal;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button4;
