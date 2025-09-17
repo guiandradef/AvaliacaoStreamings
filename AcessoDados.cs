@@ -62,7 +62,7 @@ namespace AvaliacaoStreaming
                 {
                     conexao.Open();
                     
-                    string sql = "SELECT COUNT(*) FROM usuario WHERE email = @email AND senha = @senha";
+                    string sql = "SELECT COUNT(*) FROM funcionario WHERE email = @email AND senha = @senha";
 
                     using (MySqlCommand comando = new MySqlCommand(sql, conexao))
                     {
