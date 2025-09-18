@@ -6,14 +6,13 @@
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.ComboBox cmbCampo;
-        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button BtnLimpar_Click;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAno;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNota;
-        private System.Windows.Forms.Button btnFechar;
 
         protected override void Dispose(bool disposing)
         {
@@ -25,6 +24,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPesquisarConteudo));
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.BtnPesquisar_Click = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -32,9 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.cmbCampo = new System.Windows.Forms.ComboBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.BtnLimpar_Click = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.btnFechar = new System.Windows.Forms.Button();
             this.pnlContainer.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -43,17 +42,27 @@
             // pnlContainer
             // 
             this.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContainer.Controls.Add(this.BtnPesquisar_Click);
             this.pnlContainer.Controls.Add(this.panel1);
             this.pnlContainer.Controls.Add(this.pnlHeader);
             this.pnlContainer.Controls.Add(this.txtBusca);
             this.pnlContainer.Controls.Add(this.cmbCampo);
-            this.pnlContainer.Controls.Add(this.btnLimpar);
+            this.pnlContainer.Controls.Add(this.BtnLimpar_Click);
             this.pnlContainer.Controls.Add(this.dgv);
-            this.pnlContainer.Controls.Add(this.btnFechar);
             this.pnlContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1152, 583);
             this.pnlContainer.TabIndex = 0;
+            // 
+            // BtnPesquisar_Click
+            // 
+            this.BtnPesquisar_Click.Location = new System.Drawing.Point(877, 137);
+            this.BtnPesquisar_Click.Name = "BtnPesquisar_Click";
+            this.BtnPesquisar_Click.Size = new System.Drawing.Size(75, 23);
+            this.BtnPesquisar_Click.TabIndex = 7;
+            this.BtnPesquisar_Click.Text = "Pesquisar";
+            this.BtnPesquisar_Click.UseVisualStyleBackColor = true;
+            this.BtnPesquisar_Click.Click += new System.EventHandler(this.BtnPesquisar_Click_Click);
             // 
             // panel1
             // 
@@ -119,6 +128,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(537, 24);
             this.txtBusca.TabIndex = 1;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // cmbCampo
             // 
@@ -135,14 +145,15 @@
             this.cmbCampo.Size = new System.Drawing.Size(73, 26);
             this.cmbCampo.TabIndex = 2;
             // 
-            // btnLimpar
+            // BtnLimpar_Click
             // 
-            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(866, 135);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(86, 24);
-            this.btnLimpar.TabIndex = 3;
-            this.btnLimpar.Text = "Limpar";
+            this.BtnLimpar_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLimpar_Click.Location = new System.Drawing.Point(866, 518);
+            this.BtnLimpar_Click.Name = "BtnLimpar_Click";
+            this.BtnLimpar_Click.Size = new System.Drawing.Size(86, 24);
+            this.BtnLimpar_Click.TabIndex = 3;
+            this.BtnLimpar_Click.Text = "Limpar";
+            this.BtnLimpar_Click.Click += new System.EventHandler(this.BtnLimpar_Click_Click);
             // 
             // dgv
             // 
@@ -159,15 +170,7 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(708, 333);
             this.dgv.TabIndex = 4;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.Location = new System.Drawing.Point(866, 518);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(86, 26);
-            this.btnFechar.TabIndex = 5;
-            this.btnFechar.Text = "Fechar";
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // FrmPesquisarConteudo
             // 
@@ -194,5 +197,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnVoltarPesquisarConteudo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnPesquisar_Click;
     }
 }
