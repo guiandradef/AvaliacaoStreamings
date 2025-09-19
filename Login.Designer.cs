@@ -74,6 +74,7 @@
             this.txtSenhaLogin.Name = "txtSenhaLogin";
             this.txtSenhaLogin.Size = new System.Drawing.Size(175, 26);
             this.txtSenhaLogin.TabIndex = 5;
+            this.txtSenhaLogin.UseSystemPasswordChar = true;
             // 
             // label2
             // 
